@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anon Q&A</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 760px; margin: 24px auto; padding: 0 16px; }
+    h1 { margin-bottom: 6px; }
+    .quote { opacity: .8; margin-bottom: 24px; font-style: italic; }
+    form, .card { border: 1px solid #ddd; padding: 12px; border-radius: 8px; margin: 12px 0; }
+    textarea, input[type=text] { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; }
+    button { padding: 10px 14px; border: none; border-radius: 6px; cursor: pointer; }
+    .q { font-weight: 600; margin-bottom: 6px; }
+    .answers { margin-top: 8px; padding-left: 12px; border-left: 3px solid #eee; }
+    .muted { color: #666; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Anonymous Q&A</h1>
+  <div class="quote" id="quote"></div>
+  <form id="askForm">
+    <label for="q">Ask a question (anonymous):</label><br>
+    <textarea id="q" rows="3" placeholder="Type your question..."></textarea>
+    <div class="muted">8–300 characters</div>
+    <button type="submit">Ask</button>
+  </form>
+  <div id="list"></div>
+  <template id="qtpl">
+    <div class="card">
+      <div class="q"></div>
+      <div class="muted" data-meta></div>
+      <form class="answerForm">
+        <input type="text" placeholder="Write an answer..." maxlength="500" />
+        <button type="submit">Answer</button>
+      </form>
+      <div class="answers"></div>
+    </div>
+  </template>
+  <script src="./app.js"></script>
+</body>
+</html>
