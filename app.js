@@ -1,4 +1,4 @@
-const API = '';
+const API = 'https://anon-qa.onrender.com/';
 const QUOTES = [
   "Ask bravely. Answer kindly.",
   "Curiosity builds bridges you can walk together.",
